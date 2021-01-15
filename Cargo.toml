@@ -1,12 +1,15 @@
 [package]
 name = "spare"
+description = "colorful format iterable"
 version = "0.0.1"
-authors = ["Hoyeung <hoyeungw@outlook.com>"]
+authors = ["Hoyeung Wong <hoyeungw@outlook.com>"]
 edition = "2018"
+readme = "README.md"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-veho = ">=0.0.5"
-palett = ">=0.0.1"
+veho = ">=0.0.9"
+palett = ">=0.0.4"
 num = ">=0.3.1"
