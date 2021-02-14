@@ -3,6 +3,7 @@ pub use deco::matrix::deco_matrix;
 pub use deco::vector::deco_vector;
 
 mod deco;
+mod padder;
 
 #[cfg(test)]
 mod tests {

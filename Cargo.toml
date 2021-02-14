@@ -10,6 +10,7 @@ license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-veho = ">=0.0.9"
-palett = ">=0.0.4"
+aryth = ">=0.0.9"
+veho = ">=0.0.16"
+palett = ">=0.0.5"
 num = ">=0.3.1"
