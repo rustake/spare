@@ -2,13 +2,13 @@ use aryth::indicator::vector::Indicators;
 use veho::columns::Mappers as ColumnsMapper;
 use veho::matrix::{Mappers, Matrix};
 
-use crate::padder::util::len_selector;
+use crate::padder::util::{len_selector, pad_left};
 
 pub fn matrix_padder(mx: Matrix<String>, ansi: bool) -> Matrix<String> where
 {
     let indicator = len_selector(ansi);
     let widths = (&mx).map_columns(|col| (&col).max_by(indicator).unwrap_or(0));
-    return mx.indexed_mapper(|_, j, x| format!("{: >w$}", x, w = widths[j]));
+    return mx.indexed_mapper(|_, j, x| pad_left(&x, widths[j], ansi));
 }
 
 
