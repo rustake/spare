@@ -3,7 +3,7 @@ name = "spare"
 description = "colorful format iterable"
 version = "0.0.2"
 authors = ["Hoyeung Wong <hoyeungw@outlook.com>"]
-edition = "2018"
+edition = "2021"
 readme = "README.md"
 license = "MIT"
 
