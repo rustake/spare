@@ -22,7 +22,14 @@ mod deco_entries_tests {
 
     #[test]
     fn test() {
-        let entries = vec![("one", "1"), ("two", "2"), ("three", "3")].into_hashmap();
+        let entries = vec![
+            ("un", "1"),
+            ("deux", "2"),
+            ("trois", "3"),
+            ("quatre", "4"),
+            ("cinq", "5"),
+            ("six", "6"),
+        ].into_hashmap();
         let texted_mx = deco_entries(entries, ": ");
         println!("entries = {}", texted_mx);
     }
