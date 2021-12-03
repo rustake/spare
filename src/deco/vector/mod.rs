@@ -6,7 +6,7 @@ use veho::vector::Mappers;
 
 mod joiners;
 
-trait Decorable: IntoIterator where
+pub trait Decorable: IntoIterator where
     Self: Sized,
     Self::Item: Display {
     fn deco_vector(self,

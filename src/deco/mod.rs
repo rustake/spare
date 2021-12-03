@@ -1,6 +1,6 @@
-pub use entries::deco_entries;
-pub use matrix::deco_matrix;
-pub use vector::deco_vector;
+pub use entries::{deco_entries, Decorable as DecoEntries};
+pub use matrix::{deco_matrix, Decorable as DecoMatrix};
+pub use vector::{deco_vector, Decorable as DecoVector};
 
 pub mod vector;
 pub mod matrix;
