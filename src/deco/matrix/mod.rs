@@ -24,7 +24,7 @@ pub fn deco_matrix<R, M>(mx: M,
         Some(pr) => fluo_rendered(mx, &pr, &[]),
     };
     // let texts = fluo_rendered(mx, &(OCEAN, PLANET), &[]);
-    let padded = matrix_padder(texts);
+    let padded = matrix_padder(texts, true);
     let lines: Vec<String> = mapper(padded, |vec| format!("  [ {} ],", vec.join(de)));
     return format!("[\n{}\n]", lines.join("\n"));
 }
@@ -47,8 +47,8 @@ mod deco_matrix_tests {
         let matrix = init(5, 5, |i, j| ((i as i32) + 1) * 10_i32.pow(j as u32));
         let matrix = matrix.transpose();
         let texted = deco_matrix(&matrix, None, Some((OCEAN, PLANET)));
-        println!("matrix = {}", texted);
+        println!(">> matrix = {}", texted);
         let texted = deco_matrix(&matrix, None, Some((POME, METRO)));
-        println!("matrix = {}", texted);
+        println!(">> matrix = {}", texted);
     }
 }
