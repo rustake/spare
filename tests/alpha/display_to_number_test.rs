@@ -38,6 +38,6 @@ mod tests {
     fn display_to_number_test() {
         let vec = vec!["1", "foo", "bar"];
         let result = display_vec_to_value_vec(vec);
-        println!("{}", deco_vector(result, ", "));
+        println!("{}", deco_vector(result, Some(", "), None));
     }
 }
