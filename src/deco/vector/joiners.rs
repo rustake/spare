@@ -1,9 +1,9 @@
-use std::fmt;
-use std::fmt::Write;
+use std::fmt::{Display, Write};
 
-pub trait Joiners: Iterator {
+pub trait Joiners: Iterator where
+    Self::Item: Display
+{
     fn join(&mut self, delim: &str) -> String
-        where Self::Item: fmt::Display
     {
         match self.next() {
             None => String::new(),
